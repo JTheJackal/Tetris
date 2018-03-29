@@ -1,0 +1,40 @@
+canvas {
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+h2 {
+
+    text-align: center;
+}
+
+.playBTN {
+
+    width: 100px;
+    margin: 40vh auto auto;
+}
+
+.homeIMG {
+
+    margin: 0 auto;
+    display: block;
+}
+
+.gamePageStyle {
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.scoreTable {
+
+    border-radius: 8px;
+    text-align: center;
+    background: #ababab;
+}

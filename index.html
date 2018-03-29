@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="JS/app.js"></script>
+    <script src="JS/game.js"></script>
+    <script src="JS/details.js"></script>
+    <script type="text/javascript" src="JS/phaser.js"></script>
+    <link rel="icon" href="IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon" />
+    <title></title>
+</head>
+<body>
+    <div data-role="page" id="homePage" data-theme="b">
+    	<div data-role="header" data-position="fixed">
+    		<h1>TETRIS</h1>
+    	</div><!-- /header -->
+
+    	<div data-role="content">
+            <img class="homeIMG" src="./IMG/temp.png" width="270" height="550" alt="Logo" />
+    	</div><!-- /content -->
+
+    	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#playPage" data-role="button">Play</a></li>
+                    <li><a href="#panel0" data-role="button">Menu</a></li>
+    		</div>
+    	</div><!-- /footer -->
+
+        <div id="panel0" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#helpPage" data-role="button">Help</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close0" data-role="button">Close</a>
+        </div><!-- /panel -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="playPage" data-theme="b">
+    	<div data-role="header" data-position="fixed">
+    	</div><!-- /header -->
+
+    	<div data-role="content">
+            <a class="playBTN" href="#gamePage" data-role="button">Start Game</a>
+    	</div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel1" data-role="button">Menu</a></li>
+                </ul>
+            </div>
+        </div><!-- /footer -->
+
+        <div id="panel1" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#helpPage" data-role="button">Help</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close1" data-role="button">Close</a>
+        </div><!-- /panel -->
+    </div><!-- /page -->
+
+    <div id="gamePage" class="gamePageStyle" data-role="page">
+
+    </div>
+
+    <div data-role="page" id="scorePage" data-theme="b">
+    	<div data-role="header" data-position="fixed">
+    		<h1>High Score</h1>
+    	</div><!-- /header -->
+
+    	<div data-role="content">
+
+            <div id="playerNameDiv">
+                <!-- will be used for taking the player's name -->
+            </div>
+    		<div id="tableDiv">
+                <!-- will be used for showing the high score table -->
+    		</div>
+    	</div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel2" data-role="button">Menu</a></li>
+                </ul>
+            </div><!-- /footer -->
+        </div>
+
+        <div id="panel2" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#helpPage" data-role="button">Help</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close2" data-role="button">Close</a>
+        </div><!-- /panel -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="helpPage" data-theme="b">
+    	<div data-role="header" data-position="fixed">
+    		<h1>How to Play</h1>
+    	</div><!-- /header -->
+
+    	<div data-role="content">
+    		<ul data-role="listview">
+    		    <li><a href="#rules">Rules</a></li>
+                <li><a href="#">Power Ups</a></li>
+                <li><a href="#">Power Downs</a></li>
+                <li><a href="#tips">Tips</a></li>
+    		</ul>
+    	</div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel3" data-role="button">Menu</a></li>
+                </ul>
+            </div><!-- /footer -->
+        </div>
+
+        <div id="panel3" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close3" data-role="button">Close</a>
+        </div><!-- /panel -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="rules" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <h1>Game Rules</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>Each falling block will rest when it hits a surface. If the blocks form a horizontal line along one row, that row will disappear and
+            you will be rewarded with 100 points.
+
+            Each time you earn points, the speed at which the blocks fall will increase, gradually making the game more challenging.
+
+            If the blocks touch the top of the screen, then it is game over.</p>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel5" data-role="button">Menu</a></li>
+                </ul>
+            </div><!-- /footer -->
+        </div>
+
+        <div id="panel5" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close5" data-role="button">Close</a>
+        </div><!-- /panel -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="tips" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <h1>Tips</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>Use the rotate button to align the blocks to better suit the gap you're trying to fill.</p>
+            <p>Use the preview window to see which block is coming next and plan how you should react.</p>
+            <p>Try to start moving the block immediately as it spawns to safely navigate the screen</p>
+            <p>Use the best block to destroy lines to make the next line easier.</p>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel6" data-role="button">Menu</a></li>
+                </ul>
+            </div><!-- /footer -->
+        </div>
+
+        <div id="panel6" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#aboutPage" data-role="button">About</a>
+            <a href="#" id="close6" data-role="button">Close</a>
+        </div><!-- /panel -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="aboutPage" data-theme="b">
+    	<div data-role="header" data-position="fixed">
+    		<h1>About</h1>
+    	</div><!-- /header -->
+
+    	<div data-role="content">
+    		<p>This app has been developed for the assignment in the Programming for Mobile Devices module by students B00189991 and B00272821.</p>
+    	</div><!-- /content -->
+
+    	<div data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homePage" data-role="button">Home</a></li>
+                    <li><a href="#panel4" data-role="button">Menu</a></li>
+                </ul>
+            </div><!-- /footer -->
+        </div>
+
+        <div id="panel4" data-role="panel">
+            <div><h2>Menu</h2></div>
+            <a href="#homePage" data-role="button">Home</a>
+            <a href="#playPage" data-role="button">Play</a>
+            <a href="#scorePage" data-role="button">High Scores</a>
+            <a href="#helpPage" data-role="button">Help</a>
+            <a href="#" id="close4" data-role="button">Close</a>
+        </div><!-- /panel -->
+    </div><!-- /page -->
+
+</body>
+</html>

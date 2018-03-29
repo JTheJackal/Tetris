@@ -1,0 +1,33 @@
+CACHE MANIFEST
+
+#30-04-2015 Version 0.1
+
+NETWORK:
+*
+
+CACHE:
+index.html
+JS/app.js
+JS/details.js
+JS/game.js
+JS/phaser.js
+JS/phaser.map.js
+JS/phaser.min.js
+CSS/style.css
+IMG/favicon.ico
+IMG/temp.png
+GFX/quitBTN.png
+GFX/leftBTN.png
+GFX/rightBTN.png
+GFX/rotateBTN.png
+GFX/panelInfo.png
+GFX/blocks/blue.png
+GFX/blocks/cyan.png
+GFX/blocks/green.png
+GFX/blocks/lgreen.png
+GFX/blocks/orange.png
+GFX/blocks/pink.png
+GFX/blocks/red.png
+GFX/blocks/yellow.png
+http://code.jquery.com/jquery-1.11.1.min.js
+http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js
